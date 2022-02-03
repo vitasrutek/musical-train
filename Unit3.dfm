@@ -1,0 +1,73 @@
+object workform: Tworkform
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'workform'
+  ClientHeight = 154
+  ClientWidth = 399
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  GlassFrame.Enabled = True
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 399
+    Height = 154
+    BevelInner = bvLowered
+    BevelKind = bkTile
+    TabOrder = 0
+    object Label2: TLabel
+      Left = 16
+      Top = 88
+      Width = 356
+      Height = 23
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Label2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 16
+      Top = 32
+      Width = 356
+      Height = 29
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Pracuji....'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object ActivityIndicator1: TActivityIndicator
+      Left = 26
+      Top = 32
+      Animate = True
+    end
+    object Button1: TButton
+      Left = 376
+      Top = 128
+      Width = 17
+      Height = 17
+      Caption = 'x'
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+  end
+end
