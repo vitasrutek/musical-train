@@ -95,10 +95,24 @@ end;
 
 procedure Tnovyform.Edit2Change(Sender: TObject);
 var i:integer;
+b: Boolean;
+NewChar: string;
 begin
+b := false;
   for i := 1 to length(edit2.Text) do
-    if Edit2.Text[i] = '.' then
-        ShowMessage('V názvu stavby je "."') else
+    begin
+    if (Edit2.Text[i] = '.') or (Edit2.Text[i] = '/') then
+        b:= true;
+    end;
+    if b = true then
+      begin
+        NewChar := StringReplace( Edit2.Text, '.', ' ' , [rfReplaceAll, rfIgnoreCase]);
+        edit2.Text := Newchar;
+        NewChar := StringReplace( Edit2.Text, '/', '-' , [rfReplaceAll, rfIgnoreCase]);
+        edit2.Text := Newchar;
+        ShowMessage('Byla provedena úprava textu - změna "." a "/".');
+        b := false;
+      end;
 end;
 
 procedure Tnovyform.Eedit(soubor, co: String; k1, k2: integer);

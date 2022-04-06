@@ -7,7 +7,8 @@ uses
   Unit3 in 'Unit3.pas' {workform},
   Vcl.Themes,
   Vcl.Styles,
-  Unit4 in 'Unit4.pas' {Form4};
+  Unit4 in 'Unit4.pas' {Form4},
+  Unit5 in 'Unit5.pas' {Form5};
 
 {$R *.res}
 
@@ -19,5 +20,6 @@ begin
   Application.CreateForm(Tnovyform, novyform);
   Application.CreateForm(Tworkform, workform);
   Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TForm5, Form5);
   Application.Run;
 end.
